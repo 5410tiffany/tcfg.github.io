@@ -1,6 +1,6 @@
 # TCFG
 
-This is the repository that contains source code for the [TCFG website](https://github.com/5410tiffany/tcfg.github.io/deployments/github-pages).
+This is the repository that contains source code for the [TCFG website](https://5410tiffany.github.io/tcfg.github.io/).
 
 
 # Website License
