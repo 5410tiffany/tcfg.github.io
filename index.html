@@ -142,10 +142,10 @@
             </div>
 
             <h2 class="subtitle has-text-centered">
-                In CFG, <span class="red-text">unconditional scores</span> include components that point towards directions other than the target distribution (i.e. half-moon), making the final destination deviates from the target distribution. TCFG removes
-                the inconsistent tangent components in <span class="red-text">unconditional scores</span> and reaches the target distribution more accurately combining with <span class="green-text">conditional scores</span>.
-            </h2>
-        </div>
+                In CFG, <span class="red-text">unconditional scores</span> include components that point towards directions other than the target distribution (i.e. half-moon), making the final destination deviates from
+                                the target distribution. TCFG removes the inconsistent tangent components in <span class="red-text">unconditional scores</span> and reaches the target distribution more accurately combining with <span class="green-text">conditional scores</span>.
+                                </h2>
+                            </div>
     </section>
 
 
@@ -216,125 +216,131 @@
 
 
     <!-- Quantitative Results on Stable Diffusion -->
-<div class="columns is-centered has-text-centered mt-5">
-    <div class="column is-10"> <!-- changed from is-full to is-10 -->
-      <h3 class="title is-4">Quantitative Results on Stable Diffusion</h3>
-      <div style="padding: 0 1.5rem;"> <!-- padding added -->
-        <table class="table is-bordered is-striped is-hoverable is-fullwidth">
-          <thead>
-            <tr>
-              <th></th>
-              <th></th>
-              <th>FID ↓</th>
-              <th>CLIPScore ↑</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td rowspan="2">SD v1.5</td>
-              <td>original</td>
-              <td>13.26</td>
-              <td>0.31</td>
-            </tr>
-            <tr>
-              <td>+ ours</td>
-              <td><b>13.12</b></td>
-              <td>0.31</td>
-            </tr>
-            <tr>
-              <td rowspan="2">SDXL</td>
-              <td>original</td>
-              <td>13.36</td>
-              <td>0.32</td>
-            </tr>
-            <tr>
-              <td>+ ours</td>
-              <td><b>12.65</b></td>
-              <td>0.32</td>
-            </tr>
-            <tr>
-              <td rowspan="2">SD v3</td>
-              <td>original</td>
-              <td>16.66</td>
-              <td>0.32</td>
-            </tr>
-            <tr>
-              <td>+ ours</td>
-              <td><b>13.74</b></td>
-              <td>0.32</td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="caption mt-2">
-          Zero-shot FID and CLIPScore measured on MSCOCO 30k. Our method consistently improves FID across all models—Stable Diffusion v1.5, SDXL, and SD v3—while maintaining a nearly identical CLIPScore.
-        </p>
-      </div>
+    <div class="columns is-centered has-text-centered mt-5">
+        <div class="column is-10">
+            <!-- changed from is-full to is-10 -->
+            <h3 class="title is-4">Quantitative Results on Stable Diffusion</h3>
+            <div style="padding: 0 1.5rem;">
+                <!-- padding added -->
+                <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>FID ↓</th>
+                            <th>CLIPScore ↑</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">SD v1.5</td>
+                            <td>original</td>
+                            <td>13.26</td>
+                            <td>0.31</td>
+                        </tr>
+                        <tr>
+                            <td>+ ours</td>
+                            <td><b>13.12</b></td>
+                            <td>0.31</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">SDXL</td>
+                            <td>original</td>
+                            <td>13.36</td>
+                            <td>0.32</td>
+                        </tr>
+                        <tr>
+                            <td>+ ours</td>
+                            <td><b>12.65</b></td>
+                            <td>0.32</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">SD v3</td>
+                            <td>original</td>
+                            <td>16.66</td>
+                            <td>0.32</td>
+                        </tr>
+                        <tr>
+                            <td>+ ours</td>
+                            <td><b>13.74</b></td>
+                            <td>0.32</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="caption mt-2">
+                    Zero-shot FID and CLIPScore measured on MSCOCO 30k. Our method consistently improves FID across all models—Stable Diffusion v1.5, SDXL, and SD v3—while maintaining a nearly identical CLIPScore.
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-  
-  <!-- Quantitative Results on DiT -->
-  <div class="columns is-centered has-text-centered mt-5">
-    <div class="column is-10">
-      <h3 class="title is-4">Quantitative Results on DiT</h3>
-      <div style="padding: 0 1.5rem;">
-        <table class="table is-bordered is-striped is-hoverable is-fullwidth">
-          <thead>
-            <tr>
-              <th></th>
-              <th>FID ↓</th>
-              <th>sFID ↓</th>
-              <th>Precision ↑</th>
-              <th>Recall ↑</th>
-              <th>IS ↑</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>DiT</td>
-              <td>32.67</td>
-              <td>17.92</td>
-              <td><b>0.90</b></td>
-              <td>0.13</td>
-              <td><b>271.1</b></td>
-            </tr>
-            <tr>
-              <td>DiT+ours</td>
-              <td><b>29.5</b></td>
-              <td><b>13.27</b></td>
-              <td><b>0.90</b></td>
-              <td><b>0.19</b></td>
-              <td>270.0</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-  
-  <!-- FID-CLIP Figure -->
-  <div class="columns is-centered has-text-centered mt-5">
-    <div class="column is-8">
-      <h3 class="title is-4">FID-CLIP Curve</h3>
-      <div style="padding: 0 1rem;">
-        <img src="./static/images/output.png" alt="FID-CLIP Curve" style="width: 85%; border-radius: 10px;">
-        <p class="caption mt-2">
-          FID-CLIP curves on SDXL with 50 sampling steps.
-        </p>
-      </div>
-    </div>
-  </div>
 
-    <!-- <section class="section" id="BibTeX">
+    <!-- Quantitative Results on DiT -->
+    <div class="columns is-centered has-text-centered mt-5">
+        <div class="column is-10">
+            <h3 class="title is-4">Quantitative Results on DiT</h3>
+            <div style="padding: 0 1.5rem;">
+                <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>FID ↓</th>
+                            <th>sFID ↓</th>
+                            <th>Precision ↑</th>
+                            <th>Recall ↑</th>
+                            <th>IS ↑</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>DiT</td>
+                            <td>32.67</td>
+                            <td>17.92</td>
+                            <td><b>0.90</b></td>
+                            <td>0.13</td>
+                            <td><b>271.1</b></td>
+                        </tr>
+                        <tr>
+                            <td>DiT+ours</td>
+                            <td><b>29.5</b></td>
+                            <td><b>13.27</b></td>
+                            <td><b>0.90</b></td>
+                            <td><b>0.19</b></td>
+                            <td>270.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- FID-CLIP Figure -->
+    <div class="columns is-centered has-text-centered mt-5">
+        <div class="column is-8">
+            <h3 class="title is-4">FID-CLIP Curve</h3>
+            <div style="padding: 0 1rem;">
+                <img src="./static/images/output.png" alt="FID-CLIP Curve" style="width: 85%; border-radius: 10px;">
+                <p class="caption mt-2">
+                    FID-CLIP curves on SDXL with 50 sampling steps.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
             <h2 class="title">BibTeX</h2>
-            <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+            <pre><code>@misc{kwon2025tcfgtangentialdampingclassifierfree,
+                title={TCFG: Tangential Damping Classifier-free Guidance}, 
+                author={Mingi Kwon and Shin seong Kim and Jaeseok Jeong. Yi Ting Hsiao and Youngjung Uh},
+                year={2025},
+                eprint={2503.18137},
+                archivePrefix={arXiv},
+                primaryClass={cs.CV},
+                url={https://arxiv.org/abs/2503.18137}, 
+          }
 }</code></pre>
         </div>
-    </section> -->
+    </section>
 
 
     <footer class="footer">
